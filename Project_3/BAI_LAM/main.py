@@ -418,8 +418,6 @@ elif page == "Phát hiện bất thường":
             step=0.1
         )
 
-        st.info("Trong mô hình bất thường, 'Khoảng giá min' = 30 và 'Khoảng giá max' = 100 (triệu) được gán mặc định.")
-
         # ====== TẠO INPUT RAW CHO MODEL CLUSTER ======
         input_cluster_df = pd.DataFrame({
             "Thương hiệu":    [selected_brand],
