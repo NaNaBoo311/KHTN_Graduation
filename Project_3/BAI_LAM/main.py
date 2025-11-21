@@ -3,7 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
+from pathlib import Path
 
+# Folder where main.py lives
 st.set_page_config(layout="wide")
 st.markdown("""
     <style>
@@ -87,10 +89,10 @@ st.markdown("""
 
 
 # ======================= PATHS =======================
-
-MODEL_PATH = "linear_model.pkl"   # model dự đoán giá
-CLUSTER_MODEL_PATH = "cluster.pkl"  # model phát hiện bất thường
-ENCODERS_PATH = "encoders.pkl"   # dict encoders cho các cột category
+BASE_DIR = Path(__file__).parent
+MODEL_PATH = BASE_DIR / "linear_model.pkl"   # model dự đoán giá
+CLUSTER_MODEL_PATH = BASE_DIR / "cluster.pkl"  # model phát hiện bất thường
+ENCODERS_PATH = BASE_DIR / "encoders.pkl"   # dict encoders cho các cột category
 
 # ======================= LOAD MODELS & ENCODERS =======================
 
