@@ -305,8 +305,8 @@ if page == "Dự đoán giá xe":
             "Số Km đã đi":    [so_km_da_di]
         })
 
-        st.subheader("DataFrame đầu vào (chưa encode) - debug")
-        st.dataframe(input_df)
+        # st.subheader("DataFrame đầu vào (chưa encode) - debug")
+        # st.dataframe(input_df)
 
         # ====== ENCODE CATEGORY ======
         encoded_input = input_df.copy()
@@ -327,8 +327,8 @@ if page == "Dự đoán giá xe":
 
             encoded_input[col] = le.transform(encoded_input[col])
 
-        st.subheader("DataFrame sau khi encode (debug)")
-        st.dataframe(encoded_input)
+        # st.subheader("DataFrame sau khi encode (debug)")
+        # st.dataframe(encoded_input)
 
         # ====== DỰ ĐOÁN GIÁ ======
         if st.button("Dự đoán giá"):
@@ -433,8 +433,8 @@ elif page == "Phát hiện bất thường":
             "Giá":            [gia_input]   # cũng đang ở đơn vị "triệu" nếu model train vậy
         })
 
-        st.subheader("DataFrame đầu vào (chưa encode) - debug")
-        st.dataframe(input_cluster_df)
+        # st.subheader("DataFrame đầu vào (chưa encode) - debug")
+        # st.dataframe(input_cluster_df)
 
         # ====== ENCODE CATEGORY ======
         encoded_cluster_input = input_cluster_df.copy()
@@ -455,8 +455,8 @@ elif page == "Phát hiện bất thường":
 
             encoded_cluster_input[col] = le.transform(encoded_cluster_input[col])
 
-        st.subheader("DataFrame sau khi encode (debug)")
-        st.dataframe(encoded_cluster_input)
+        # st.subheader("DataFrame sau khi encode (debug)")
+        # st.dataframe(encoded_cluster_input)
 
         # ====== DỰ ĐOÁN BẤT THƯỜNG ======
         if st.button("Kiểm tra bất thường"):
